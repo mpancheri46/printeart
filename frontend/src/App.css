@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'QuebecSerial';
-  src: url('/fonts/Quebec-Serial-Heavy Regular.ttf') format('truetype');
+  src: url('./fonts/Quebec-Serial-Heavy Regular.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
