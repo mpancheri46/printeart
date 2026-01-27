@@ -834,6 +834,19 @@ body {
   margin-bottom: 32px;
 }
 
+.cta .btn.primary {
+  background: var(--primary);
+  color: var(--text-dark);
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(188, 245, 0, 0.4);
+}
+
+.cta .btn.primary:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 28px rgba(255, 255, 255, 0.3);
+}
+
 /* =========================
    FOOTER
 ========================= */
