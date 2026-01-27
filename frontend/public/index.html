@@ -1,179 +1,339 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixel Memories - Fotolibros y Regalos Personalizados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fotolibros, polaroids y regalos personalizados con calidad editorial. Envíos a todo el país.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="productos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>Emergent | Fullstack App</title>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!--
-        These two scripts have been added for the Visual Edits, please do not edit or remove them
-        -->
-        <script>
-            // Only load visual edit scripts when inside an iframe
-            if (window.self !== window.top) {
-                // Load debug monitor script
-                var debugMonitorScript = document.createElement('script');
-                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
-                document.head.appendChild(debugMonitorScript);
+<body>
 
-                // Configure Tailwind
-                window.tailwind = window.tailwind || {};
-                tailwind.config = {
-                    corePlugins: { preflight: false },
-                };
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <div class="logo">Pixel<span>Memories</span></div>
 
-                // Load Tailwind CDN
-                var tailwindScript = document.createElement('script');
-                tailwindScript.src = 'https://cdn.tailwindcss.com';
-                document.head.appendChild(tailwindScript);
-            }
-        </script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span class="hamburger"></span>
+    </button>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <nav class="menu" id="mainMenu">
+      <a href="#productos">Productos</a>
+      <a href="#fotolibros">Fotolibros</a>
+      <a href="#corporativo">Corporativo</a>
+      <a href="#como-funciona">Cómo comprar</a>
+    </nav>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-        <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
-            style="
-                display: inline-flex !important;
-                box-sizing: border-box;
-                width: 178px;
-                height: 40px;
-                padding: 8px 12px 8px 12px;
-                align-items: center !important;
-                gap: 8px;
-                border-radius: 50px !important;
-                background: #000 !important;
-                position: fixed !important;
-                bottom: 20px;
-                right: 20px;
-                text-decoration: none;
-                font-family: -apple-system, BlinkMacSystemFont,
-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-                    sans-serif !important;
-                font-size: 12px !important;
-                z-index: 9999 !important;
-            "
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M15.5702 8.13142C15.7729 8.0412 16.0007 8.18878 15.9892 8.4103C15.8374 11.3192 14.0965 14.0405 11.2531 15.3065C8.40964 16.5725 5.2224 16.0453 2.95912 14.2117C2.78676 14.072 2.82955 13.804 3.03219 13.7137L4.95677 12.8568C5.04866 12.8159 5.15446 12.823 5.24204 12.8725C6.73377 13.7153 8.59176 13.8649 10.2772 13.1145C11.9626 12.3641 13.0947 10.8833 13.4665 9.21075C13.4883 9.11256 13.5539 9.02918 13.6457 8.98827L15.5702 8.13142Z" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3066 4.74698L15.5067 5.19653C15.5759 5.35178 15.5061 5.53366 15.3508 5.60278L1.29992 11.8586C1.14467 11.9278 0.962794 11.8579 0.893675 11.7027L0.701732 11.2716L0.693457 11.2531C-1.10317 7.21778 0.711626 2.49007 4.74692 0.693443C8.78221 -1.10318 13.51 0.711693 15.3066 4.74698ZM2.82356 8.55367C2.63552 8.63739 2.41991 8.51617 2.40853 8.31065C2.28373 6.05724 3.53858 3.85787 5.72286 2.88536C7.90715 1.91286 10.3813 2.45199 11.9724 4.05256C12.1175 4.19854 12.0633 4.43988 11.8753 4.5236L2.82356 8.55367Z" fill="white"/>
-            </svg>
-            <p
-                style="
-                    color: #FFF !important;
-                    font-family: 'Inter', sans-serif !important;
-                    font-size: 13px !important;
-                    font-style: normal !important;
-                    font-weight: 600 !important;
-                    line-height: 20px !important;
-                    margin: 0 !important;
-                    white-space: nowrap !important;
-                "
-            >
-                Made with Emergent
-            </p>
-        </a>
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
-                api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
-                session_recording: {
-                    recordCrossOriginIframes: true,
-                },
-            });
-        </script>
-    </body>
+    <div class="icons">
+      <button class="icon-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+      <button class="icon-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></button>
+      <button class="icon-btn cart-btn" aria-label="Carrito">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-text fade-in">
+      <h1>Tus recuerdos, impresos <br> con <span>calidad editorial.</span></h1>
+      <p>Fotolibros, fotos y regalos personalizados. Envíos a todo el país.</p>
+
+      <div class="buttons">
+        <button class="btn primary" data-testid="btn-fotolibros">
+          <i class="fas fa-book-open"></i> Ver Fotolibros
+        </button>
+        <button class="btn secondary" data-testid="btn-polaroids">
+          <i class="fas fa-image"></i> Imprimir Fotos / Polaroids
+        </button>
+      </div>
+
+      <div class="badges">
+        <span class="badge"><i class="fas fa-map-marker-alt"></i> Retiro en Martinez</span>
+        <span class="badge"><i class="fab fa-whatsapp"></i> Soporte por WhatsApp</span>
+        <span class="badge"><i class="fas fa-lock"></i> Pagos seguros</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BLOQUES -->
+<section class="dual" id="categorias">
+  <div class="container dual-grid">
+
+    <!-- CARD RECUERDOS -->
+    <div class="rec-card fade-in-left" id="fotolibros">
+      <div class="rec-card__content">
+        <h2>Para tus recuerdos</h2>
+        <p class="card-desc">Fotolibros, polaroids y más para guardar tus mejores momentos</p>
+        <button class="btn-rec" data-testid="btn-ver-productos">
+          <i class="fas fa-heart"></i> Ver productos
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD EMPRESA -->
+    <div class="corp-card fade-in-right" id="corporativo">
+      <div class="corp-card__content">
+        <h2>Para tu empresa</h2>
+        <p class="card-desc">Merchandising, regalos corporativos y más para tu marca</p>
+        <button class="btn-corp" data-testid="btn-soluciones-corp">
+          <i class="fas fa-building"></i> Soluciones Corporativas
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PRODUCTOS -->
+<section class="products" id="productos">
+  <div class="container">
+    <h2 class="section-title fade-in">Nuestros Productos destacados</h2>
+
+    <div class="products-grid">
+      <div class="product-card fade-in-up" data-testid="product-fotolibros">
+        <img src="assets/productos/caja_fotolibro.png" alt="Fotolibros" class="product-card__img" loading="lazy">
+        <div class="product-card__title">Fotolibros</div>
+        <div class="product-card__price">Desde $12.500</div>
+        <button class="btn-product">Ver opciones</button>
+      </div>
+
+      <div class="product-card fade-in-up" data-testid="product-polaroids">
+        <img src="assets/productos/caja_polaroid.png" alt="Polaroids" class="product-card__img" loading="lazy">
+        <div class="product-card__title">Polaroids</div>
+        <div class="product-card__price">Desde $4.200</div>
+        <button class="btn-product">Ver opciones</button>
+      </div>
+
+      <div class="product-card fade-in-up" data-testid="product-fotos-clasicas">
+        <img src="https://images.pexels.com/photos/2780553/pexels-photo-2780553.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fotos Clásicas" class="product-card__img" loading="lazy">
+        <div class="product-card__title">Fotos Clásicas</div>
+        <div class="product-card__price">Desde $1.800</div>
+        <button class="btn-product">Ver opciones</button>
+      </div>
+
+      <div class="product-card fade-in-up" data-testid="product-fotocuadros">
+        <img src="https://images.pexels.com/photos/2232117/pexels-photo-2232117.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fotocuadros" class="product-card__img" loading="lazy">
+        <div class="product-card__title">Fotocuadros</div>
+        <div class="product-card__price">Desde $8.900</div>
+        <button class="btn-product">Ver opciones</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- COMO FUNCIONA -->
+<section class="how" id="como-funciona">
+  <div class="container">
+    <h2 class="section-title fade-in">Cómo Funciona</h2>
+    <div class="how-grid">
+      <div class="step fade-in-up">
+        <div class="step-icon"><i class="fas fa-hand-pointer"></i></div>
+        <div class="step-number">1</div>
+        <h3>Elegí tu producto</h3>
+        <p>Explorá nuestro catálogo y elegí lo que más te guste</p>
+      </div>
+      <div class="step fade-in-up">
+        <div class="step-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <div class="step-number">2</div>
+        <h3>Subí tus fotos</h3>
+        <p>Cargá tus imágenes y personalizá tu diseño fácilmente</p>
+      </div>
+      <div class="step fade-in-up">
+        <div class="step-icon"><i class="fas fa-truck"></i></div>
+        <div class="step-number">3</div>
+        <h3>Imprimimos y enviamos</h3>
+        <p>Recibí tu pedido en la puerta de tu casa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES / GALERÍA -->
+<section class="clients" id="clientes">
+  <div class="container">
+    <h2 class="section-title fade-in">Nuestros Clientes Felices</h2>
+    <div class="clients-grid">
+      <div class="client fade-in-up">
+        <img src="https://images.unsplash.com/photo-1563696629810-8f510c46ecf9?auto=format&fit=crop&w=400&q=80" alt="Cliente con fotolibro" loading="lazy">
+      </div>
+      <div class="client fade-in-up">
+        <img src="https://images.pexels.com/photos/11986518/pexels-photo-11986518.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fotos polaroid" loading="lazy">
+      </div>
+      <div class="client fade-in-up">
+        <img src="https://images.unsplash.com/photo-1569100922032-b9702915dd02?auto=format&fit=crop&w=400&q=80" alt="Cámara polaroid" loading="lazy">
+      </div>
+      <div class="client fade-in-up">
+        <img src="https://images.pexels.com/photos/2983401/pexels-photo-2983401.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Álbum de fotos" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="reviews" id="testimonios">
+  <div class="container">
+    <h2 class="section-title fade-in">Lo que dicen de nosotros</h2>
+    
+    <div class="reviews-carousel">
+      <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review active">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Increíble la calidad del fotolibro. Lo pedí para el primer año de mi bebé y quedó hermoso. El papel es de primera y los colores muy vivos. 100% recomendado!"</p>
+          <div class="review-author">
+            <div class="author-avatar">MC</div>
+            <div class="author-info">
+              <span class="author-name">María Cecilia R.</span>
+              <span class="author-location">Buenos Aires</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Hice polaroids para mi casamiento y fueron un éxito total. Todos los invitados se llevaron una de recuerdo. El envío llegó rapidísimo y todo perfecto."</p>
+          <div class="review-author">
+            <div class="author-avatar">LG</div>
+            <div class="author-info">
+              <span class="author-name">Luciana G.</span>
+              <span class="author-location">Córdoba</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Trabajo con ellos para regalos corporativos de mi empresa. Siempre cumplen con los plazos y la calidad es excelente. El equipo de atención es muy profesional."</p>
+          <div class="review-author">
+            <div class="author-avatar">JP</div>
+            <div class="author-info">
+              <span class="author-name">Juan Pablo M.</span>
+              <span class="author-location">Rosario</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Le regalé un fotocuadro a mi mamá con fotos de toda la familia y lloró de la emoción. La impresión es espectacular y el marco muy elegante. Gracias por tanto!"</p>
+          <div class="review-author">
+            <div class="author-avatar">SF</div>
+            <div class="author-info">
+              <span class="author-name">Sofía F.</span>
+              <span class="author-location">Mendoza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-content fade-in">
+      <h2>¿Listo para crear tu próximo recuerdo?</h2>
+      <p>Empezá hoy y recibí tu pedido en pocos días</p>
+      <button class="btn primary large" data-testid="btn-empezar-ahora">
+        <i class="fas fa-magic"></i> Empezar ahora
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Pixel<span>Memories</span></div>
+        <p class="footer-desc">Transformamos tus mejores momentos en recuerdos que duran para siempre.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#">Fotolibros</a></li>
+          <li><a href="#">Polaroids</a></li>
+          <li><a href="#">Fotos Clásicas</a></li>
+          <li><a href="#">Fotocuadros</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Cómo comprar</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Envíos</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-map-marker-alt"></i> Martinez, Buenos Aires</li>
+          <li><i class="fab fa-whatsapp"></i> +54 11 1234-5678</li>
+          <li><i class="fas fa-envelope"></i> hola@pixelmemories.com</li>
+          <li><i class="fas fa-clock"></i> Lun-Vie 9:00 - 18:00</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pixel Memories. Todos los derechos reservados.</p>
+      <div class="payment-methods">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-amex"></i>
+        <img src="https://www.mercadopago.com/org-img/MP3/home/logomp3.gif" alt="MercadoPago" class="mp-logo">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5491112345678" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="main.js"></script>
+</body>
 </html>
