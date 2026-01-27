@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 // Pixel Memories - Landing Page
 function App() {
