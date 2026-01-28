@@ -257,11 +257,11 @@ body {
 .hero .container {
   position: relative;
   z-index: 1;
-  padding-left: 5%;
+  padding-left: 80px;
 }
 
 .hero-grid {
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .hero-text h1 {
