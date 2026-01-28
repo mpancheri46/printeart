@@ -421,20 +421,20 @@ const CorporativoPage = () => {
       <section className="corp-info">
         <div className="container">
           <div className="corp-info-single">
-            <div className="corp-info-card contact full-width">
+            <div className="corp-info-card contact">
               <div className="corp-info-content">
                 <h3>¿Tenés una consulta?</h3>
-                <p>Asesoramiento personalizado en todo momento.</p>
+                <p>Asesoramiento personalizado en todo momento para tu empresa.</p>
                 <div className="contact-methods">
                   <span><i className="fab fa-whatsapp"></i> WhatsApp las 24 hs.</span>
                   <span><i className="fas fa-phone"></i> +54 9 11 1234 5678</span>
                 </div>
-                <button className="btn-corp-outline">
-                  Enviar Mensaje <i className="fas fa-chevron-right"></i>
-                </button>
+                <a href="https://wa.me/5491112345678?text=%C2%BFTen%C3%A9s%20alguna%20duda%20extra%3F" target="_blank" rel="noopener noreferrer" className="btn-corp-whatsapp">
+                  <i className="fab fa-whatsapp"></i> ¿Tenés alguna duda extra? Escribinos
+                </a>
               </div>
               <div className="corp-info-img contact-img">
-                <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Contacto" />
+                <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Contacto" />
               </div>
             </div>
           </div>
