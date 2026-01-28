@@ -417,24 +417,11 @@ const CorporativoPage = () => {
         </div>
       </section>
 
-      {/* DUAL INFO CARDS */}
+      {/* CONTACT CARD */}
       <section className="corp-info">
         <div className="container">
-          <div className="corp-info-grid">
-            <div className="corp-info-card catalog">
-              <div className="corp-info-content">
-                <h3>Conocé nuestro catálogo</h3>
-                <p>Imprimí tarjetas de presentación con calidad profesional.</p>
-                <button className="btn-corp-outline">
-                  Ver Productos <i className="fas fa-chevron-right"></i>
-                </button>
-              </div>
-              <div className="corp-info-img">
-                <img src="https://images.pexels.com/photos/6177607/pexels-photo-6177607.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Catálogo" />
-              </div>
-            </div>
-            
-            <div className="corp-info-card contact">
+          <div className="corp-info-single">
+            <div className="corp-info-card contact full-width">
               <div className="corp-info-content">
                 <h3>¿Tenés una consulta?</h3>
                 <p>Asesoramiento personalizado en todo momento.</p>
@@ -475,41 +462,30 @@ const CorporativoPage = () => {
       {/* CLIENTES CORPORATIVOS */}
       <section className="corp-clients">
         <div className="container">
-          <div className="corp-clients-grid">
-            <div className="corp-clients-sidebar">
-              <div className="sidebar-badge">Clientes Corporativos</div>
-              <div className="sidebar-links">
-                <a href="#"><i className="fas fa-envelope"></i> Recibir productos</a>
-                <a href="#"><i className="fas fa-building"></i> Precios empresas</a>
-                <a href="#"><i className="fas fa-percentage"></i> Descuentos</a>
+          <div className="corp-testimonials">
+            <h3>Lo que dicen nuestros clientes</h3>
+            <div className="corp-testimonial-card">
+              <div className="corp-testimonial-img">
+                <div className="testimonial-avatar">{corpReviews[currentReview].initials}</div>
               </div>
+              <div className="corp-testimonial-content">
+                <div className="review-stars">
+                  {[...Array(5)].map((_, i) => <i key={i} className="fas fa-star"></i>)}
+                </div>
+                <p>"{corpReviews[currentReview].text}"</p>
+                <div className="testimonial-author">
+                  <strong>{corpReviews[currentReview].author}</strong>
+                  <span>{corpReviews[currentReview].company}</span>
+                </div>
+              </div>
+              <button className="testimonial-nav" onClick={() => setCurrentReview((prev) => (prev + 1) % corpReviews.length)}>
+                <i className="fas fa-chevron-right"></i>
+              </button>
             </div>
-            
-            <div className="corp-testimonials">
-              <h3>Lo que dicen nuestros clientes</h3>
-              <div className="corp-testimonial-card">
-                <div className="corp-testimonial-img">
-                  <div className="testimonial-avatar">{corpReviews[currentReview].initials}</div>
-                </div>
-                <div className="corp-testimonial-content">
-                  <div className="review-stars">
-                    {[...Array(5)].map((_, i) => <i key={i} className="fas fa-star"></i>)}
-                  </div>
-                  <p>"{corpReviews[currentReview].text}"</p>
-                  <div className="testimonial-author">
-                    <strong>{corpReviews[currentReview].author}</strong>
-                    <span>{corpReviews[currentReview].company}</span>
-                  </div>
-                </div>
-                <button className="testimonial-nav" onClick={() => setCurrentReview((prev) => (prev + 1) % corpReviews.length)}>
-                  <i className="fas fa-chevron-right"></i>
-                </button>
-              </div>
-              <div className="testimonial-dots">
-                {corpReviews.map((_, index) => (
-                  <span key={index} className={`dot ${index === currentReview ? 'active' : ''}`} onClick={() => setCurrentReview(index)}></span>
-                ))}
-              </div>
+            <div className="testimonial-dots">
+              {corpReviews.map((_, index) => (
+                <span key={index} className={`dot ${index === currentReview ? 'active' : ''}`} onClick={() => setCurrentReview(index)}></span>
+              ))}
             </div>
           </div>
         </div>
@@ -519,15 +495,12 @@ const CorporativoPage = () => {
       <section className="corp-cta">
         <div className="container">
           <div className="corp-cta-content">
-            <h2>¿Listo para potenciar tu marca?</h2>
-            <p>Contactanos y recibí un presupuesto personalizado para tu empresa.</p>
+            <h2>¿Tenés alguna duda extra?</h2>
+            <p>¿Pensás que podemos hacer algo que no ves en el catálogo? Contactanos y lo charlamos.</p>
             <div className="corp-cta-buttons">
-              <a href="mailto:hola@printeart.com?subject=Solicitud de Presupuesto Corporativo" className="btn-corp-primary">
-                <i className="fas fa-file-invoice"></i> Solicitar Presupuesto
+              <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer" className="btn-corp-primary">
+                <i className="fab fa-whatsapp"></i> Hablemos por WhatsApp
               </a>
-              <button className="btn-corp-secondary">
-                <i className="fab fa-whatsapp"></i> Hablar por WhatsApp
-              </button>
             </div>
           </div>
         </div>
