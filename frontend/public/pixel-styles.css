@@ -1658,8 +1658,9 @@ body {
 
 .testimonial-dots {
   display: flex;
-  gap: 8px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
 }
 
 .testimonial-dots .dot {
