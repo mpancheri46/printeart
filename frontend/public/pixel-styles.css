@@ -1333,26 +1333,42 @@ body {
 
 .corp-hero-img {
   position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.corp-hero-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.15) 0%,
+    transparent 50%,
+    rgba(0,0,0,0.1) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.corp-hero-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, rgba(250,248,245,0.95) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .corp-hero-img img {
   width: 100%;
   border-radius: 16px;
   box-shadow: var(--shadow-lg);
-  opacity: 0;
-  animation: fadeInImage 0.8s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeInImage {
-  from {
-    opacity: 0;
-    transform: scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  display: block;
 }
 
 /* CORP INFO CARDS */
