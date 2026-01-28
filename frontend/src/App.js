@@ -159,28 +159,24 @@ function App() {
             <div className="product-card" data-testid="product-fotolibros">
               <img src="/assets/productos/caja_fotolibro.png" alt="Fotolibros" className="product-card__img" loading="lazy" />
               <div className="product-card__title">Fotolibros</div>
-              <div className="product-card__price">Desde $12.500</div>
               <button className="btn-product">Ver opciones</button>
             </div>
 
             <div className="product-card" data-testid="product-polaroids">
               <img src="/assets/productos/caja_polaroid.png" alt="Polaroids" className="product-card__img" loading="lazy" />
               <div className="product-card__title">Polaroids</div>
-              <div className="product-card__price">Desde $4.200</div>
               <button className="btn-product">Ver opciones</button>
             </div>
 
             <div className="product-card" data-testid="product-fotos-clasicas">
               <img src="https://images.pexels.com/photos/2780553/pexels-photo-2780553.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fotos Clásicas" className="product-card__img" loading="lazy" />
               <div className="product-card__title">Fotos Clásicas</div>
-              <div className="product-card__price">Desde $1.800</div>
               <button className="btn-product">Ver opciones</button>
             </div>
 
             <div className="product-card" data-testid="product-fotocuadros">
               <img src="https://images.pexels.com/photos/2232117/pexels-photo-2232117.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fotocuadros" className="product-card__img" loading="lazy" />
               <div className="product-card__title">Fotocuadros</div>
-              <div className="product-card__price">Desde $8.900</div>
               <button className="btn-product">Ver opciones</button>
             </div>
           </div>
