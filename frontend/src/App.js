@@ -396,11 +396,34 @@ function App() {
       <section className="cta">
         <div className="container">
           <div className="cta-content">
-            <h2>¿Listo para crear tu próximo recuerdo?</h2>
-            <p>Empezá hoy y recibí tu pedido en pocos días</p>
-            <button className="btn primary large" data-testid="btn-empezar-ahora">
-              <i className="fas fa-magic"></i> Empezar ahora
-            </button>
+            <div className="cta-badge">
+              <i className="fas fa-camera-retro"></i>
+              <span>+5000 clientes felices</span>
+            </div>
+            <h2>Transformá tus fotos en <span className="cta-highlight">arte impreso</span></h2>
+            <p>Cada imagen cuenta una historia. Dejanos ayudarte a preservarla con la mejor calidad de impresión.</p>
+            <div className="cta-buttons">
+              <button className="btn cta-primary" data-testid="btn-empezar-ahora">
+                <i className="fas fa-magic"></i> Crear mi proyecto
+              </button>
+              <button className="btn cta-secondary" data-testid="btn-ver-catalogo">
+                <i className="fas fa-images"></i> Ver catálogo
+              </button>
+            </div>
+            <div className="cta-trust">
+              <div className="trust-item">
+                <i className="fas fa-truck"></i>
+                <span>Envío a todo el país</span>
+              </div>
+              <div className="trust-item">
+                <i className="fas fa-shield-alt"></i>
+                <span>Garantía de calidad</span>
+              </div>
+              <div className="trust-item">
+                <i className="fas fa-headset"></i>
+                <span>Soporte personalizado</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
