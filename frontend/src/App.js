@@ -353,10 +353,7 @@ function App() {
         </div>
       </footer>
 
-      {/* WhatsApp Float */}
-      <a href="https://wa.me/5491112345678" className="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-        <i className="fab fa-whatsapp"></i>
-      </a>
+      {/* WhatsApp removed */}
     </div>
   );
 }
