@@ -1508,13 +1508,13 @@ body {
 }
 
 .corp-product-card h4 {
-  padding: 16px 16px 8px;
+  padding: 20px 20px 10px;
   font-size: 16px;
   color: var(--text-dark);
 }
 
 .corp-product-card p {
-  padding: 0 16px;
+  padding: 0 20px 20px;
   font-size: 13px;
   color: var(--text-medium);
   line-height: 1.5;
