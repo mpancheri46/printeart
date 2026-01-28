@@ -68,7 +68,7 @@ function App() {
       {/* HEADER */}
       <header className={`header ${headerScrolled ? 'scrolled' : ''}`}>
         <div className="container nav">
-          <div className="logo">Pixel<span>Memories</span></div>
+          <div className="logo">Printe<span>art</span></div>
 
           <button 
             className={`menu-toggle ${menuOpen ? 'active' : ''}`} 
@@ -306,7 +306,7 @@ function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
-              <div className="footer-logo">Pixel<span>Memories</span></div>
+              <div className="footer-logo">Printe<span>art</span></div>
               <p className="footer-desc">Transformamos tus mejores momentos en recuerdos que duran para siempre.</p>
               <div className="footer-social">
                 <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
