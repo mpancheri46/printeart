@@ -1313,7 +1313,7 @@ body {
   gap: 12px;
   padding: 16px 32px;
   background: var(--primary);
-  color: #000;
+  color: #000 !important;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -1327,7 +1327,8 @@ body {
 .btn-corp-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(188, 245, 0, 0.4);
-  color: #000;
+  color: #000 !important;
+  background: var(--primary-dark);
 }
 
 .corp-hero-img {
