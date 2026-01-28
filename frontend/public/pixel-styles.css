@@ -50,9 +50,10 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1280px;
+  width: 85%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 /* =========================
@@ -77,13 +78,12 @@ body {
 ========================= */
 .header {
   background: var(--white);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: box-shadow var(--transition);
+  transition: all var(--transition);
 }
 
 .header.scrolled {
@@ -94,12 +94,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 20px 60px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .logo {
   font-family: 'QuebecSerial', 'Segoe UI', sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--text-dark);
   letter-spacing: -0.5px;
@@ -108,45 +110,37 @@ body {
 .logo span {
   font-weight: 300;
   font-family: 'Segoe UI', sans-serif;
+  color: var(--primary-dark);
 }
 
 .menu {
   display: flex;
-  gap: 32px;
+  gap: 40px;
+  background: var(--bg-cream);
+  padding: 14px 32px;
+  border-radius: 50px;
 }
 
 .menu a {
   text-decoration: none;
   color: var(--text-medium);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   transition: color var(--transition);
   cursor: pointer;
-}
-
-.menu a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  transition: width var(--transition);
 }
 
 .menu a:hover {
   color: var(--text-dark);
 }
 
-.menu a:hover::after {
-  width: 100%;
-}
-
 .icons {
   display: flex;
   gap: 8px;
+  background: var(--bg-cream);
+  padding: 8px 16px;
+  border-radius: 50px;
 }
 
 .icon-btn {
