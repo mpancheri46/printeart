@@ -386,7 +386,7 @@ const CorporativoPage = () => {
     { title: "Afiches y Posters", desc: "Atrae la atención a tus campañas con afiches de alta calidad.", img: "https://images.pexels.com/photos/6177645/pexels-photo-6177645.jpeg?auto=compress&cs=tinysrgb&w=400", icon: "fas fa-image" },
     { title: "Merchandising", desc: "Llaveros, imanes, blocs de notas y más artículos personalizados.", img: "https://images.pexels.com/photos/5632381/pexels-photo-5632381.jpeg?auto=compress&cs=tinysrgb&w=400", icon: "fas fa-gift" },
     { title: "Packaging Personalizado", desc: "Cajas y empaques con tu marca para una presentación única.", img: "https://images.pexels.com/photos/4498136/pexels-photo-4498136.jpeg?auto=compress&cs=tinysrgb&w=400", icon: "fas fa-box" },
-    { title: "Calendarios Corporativos", desc: "Calendarios de escritorio y pared con tu branding.", img: "https://images.pexels.com/photos/1558682/pexels-photo-1558682.jpeg?auto=compress&cs=tinysrgb&w=400", icon: "fas fa-calendar-alt" },
+    { title: "Calendarios Corporativos", desc: "Calendarios de escritorio y pared con tu branding.", img: "https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=400", icon: "fas fa-calendar-alt" },
   ];
 
   useEffect(() => {
