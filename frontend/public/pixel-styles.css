@@ -812,21 +812,127 @@ body {
 ========================= */
 .cta {
   padding: 100px 0;
-  background: linear-gradient(135deg, var(--text-dark) 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(188, 245, 0, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(188, 245, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(188, 245, 0, 0.15);
+  color: var(--primary);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  border: 1px solid rgba(188, 245, 0, 0.3);
+}
+
+.cta-badge i {
+  font-size: 16px;
 }
 
 .cta-content h2 {
   font-family: 'QuebecSerial', 'Segoe UI', sans-serif;
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(32px, 5vw, 48px);
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.cta-highlight {
+  color: var(--primary);
+  position: relative;
 }
 
 .cta-content p {
   color: rgba(255,255,255,0.7);
   font-size: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.btn.cta-primary {
+  background: var(--primary);
+  color: var(--text-dark);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 4px 24px rgba(188, 245, 0, 0.35);
+}
+
+.btn.cta-primary:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
+}
+
+.btn.cta-secondary {
+  background: transparent;
+  color: var(--white);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.btn.cta-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.cta-trust {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+}
+
+.trust-item i {
+  color: var(--primary);
+  font-size: 18px;
 }
 
 .cta .btn.primary {
