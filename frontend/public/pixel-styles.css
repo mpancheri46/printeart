@@ -1377,14 +1377,7 @@ body {
   background: var(--white);
 }
 
-.corp-info-grid {
-  display: flex;
-  justify-content: center;
-}
-
 .corp-info-single {
-  display: flex;
-  justify-content: center;
   width: 100%;
 }
 
@@ -1396,10 +1389,6 @@ body {
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.05);
   transition: all var(--transition);
-}
-
-.corp-info-card.full-width {
-  max-width: 600px;
   width: 100%;
 }
 
