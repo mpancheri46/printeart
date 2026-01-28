@@ -1569,72 +1569,18 @@ body {
   background: var(--bg-warm);
 }
 
-.corp-clients-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.corp-clients-sidebar {
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  width: 100%;
-  max-width: 700px;
-}
-
-.sidebar-badge {
-  background: var(--primary);
-  color: #000;
-  padding: 20px 28px;
-  font-weight: 700;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.sidebar-links {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  padding: 0 16px;
-}
-
-.sidebar-links a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 20px 24px;
-  color: var(--text-dark);
-  text-decoration: none;
-  font-size: 14px;
-  transition: background var(--transition);
-}
-
-.sidebar-links a:hover {
-  background: var(--bg-cream);
-}
-
-.sidebar-links i {
-  color: var(--text-medium);
-  width: 18px;
-}
-
 .corp-testimonials {
   width: 100%;
-  max-width: 800px;
+  max-width: 750px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .corp-testimonials h3 {
   font-family: 'QuebecSerial', 'Segoe UI', sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   color: var(--text-dark);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .corp-testimonial-card {
