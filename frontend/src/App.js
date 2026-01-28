@@ -406,9 +406,9 @@ const CorporativoPage = () => {
             <div className="corp-hero-text">
               <h1>Soluciones de impresión <br/>para <span>empresas.</span></h1>
               <p>Tarjetas, folletos, banners, carpetas y merchandising personalizado. Todo lo que tu empresa necesita, impreso con calidad y a tiempo.</p>
-              <button className="btn-corp-cta">
+              <a href="mailto:hola@printeart.com?subject=Solicitud de Presupuesto Corporativo" className="btn-corp-cta">
                 <i className="fas fa-file-invoice"></i> Pedir Presupuesto
-              </button>
+              </a>
             </div>
             <div className="corp-hero-img">
               <img src="https://images.pexels.com/photos/5673488/pexels-photo-5673488.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Productos corporativos" />
@@ -466,9 +466,6 @@ const CorporativoPage = () => {
                 </div>
                 <h4>{product.title}</h4>
                 <p>{product.desc}</p>
-                <button className="btn-ver-mas">
-                  Ver más <i className="fas fa-chevron-right"></i>
-                </button>
               </div>
             ))}
           </div>
@@ -525,9 +522,9 @@ const CorporativoPage = () => {
             <h2>¿Listo para potenciar tu marca?</h2>
             <p>Contactanos y recibí un presupuesto personalizado para tu empresa.</p>
             <div className="corp-cta-buttons">
-              <button className="btn-corp-primary">
+              <a href="mailto:hola@printeart.com?subject=Solicitud de Presupuesto Corporativo" className="btn-corp-primary">
                 <i className="fas fa-file-invoice"></i> Solicitar Presupuesto
-              </button>
+              </a>
               <button className="btn-corp-secondary">
                 <i className="fab fa-whatsapp"></i> Hablar por WhatsApp
               </button>
