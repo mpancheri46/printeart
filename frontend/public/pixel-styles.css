@@ -1398,20 +1398,20 @@ body {
 
 .corp-info-content {
   flex: 1;
-  padding: 32px;
+  padding: 48px 60px;
 }
 
 .corp-info-content h3 {
   font-family: 'QuebecSerial', 'Segoe UI', sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--text-dark);
   margin-bottom: 12px;
 }
 
 .corp-info-content p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-medium);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .contact-methods {
