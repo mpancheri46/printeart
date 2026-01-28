@@ -188,21 +188,13 @@ function App() {
 
           <nav className={`menu ${menuOpen ? 'active' : ''}`}>
             <a href="#productos" onClick={(e) => { e.preventDefault(); scrollToSection('productos'); }}>Productos</a>
-            <a href="#fotolibros" onClick={(e) => { e.preventDefault(); scrollToSection('fotolibros'); }}>Fotolibros</a>
             <a href="#corporativo" onClick={(e) => { e.preventDefault(); scrollToSection('corporativo'); }}>Corporativo</a>
             <a href="#como-funciona" onClick={(e) => { e.preventDefault(); scrollToSection('como-funciona'); }}>Cómo comprar</a>
           </nav>
 
           <div className="icons">
-            <button className="icon-btn" aria-label="Buscar">
-              <i className="fas fa-search"></i>
-            </button>
             <button className="icon-btn" aria-label="WhatsApp">
               <i className="fab fa-whatsapp"></i>
-            </button>
-            <button className="icon-btn cart-btn" aria-label="Carrito">
-              <i className="fas fa-shopping-cart"></i>
-              <span className="cart-count">0</span>
             </button>
           </div>
         </div>
