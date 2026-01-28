@@ -1496,6 +1496,18 @@ body {
 .corp-product-img {
   height: 160px;
   overflow: hidden;
+  position: relative;
+}
+
+.corp-product-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to top, rgba(255,255,255,0.9) 0%, transparent 100%);
+  pointer-events: none;
 }
 
 .corp-product-img img {
