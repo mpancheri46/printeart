@@ -31,6 +31,114 @@ function App() {
       author: "Sofía F.",
       location: "Mendoza",
       initials: "SF"
+    },
+    {
+      text: "Armé un álbum con las fotos de mi viaje a Europa y quedó espectacular. La calidad del papel y la impresión superaron mis expectativas. Muy profesionales.",
+      author: "Martín D.",
+      location: "La Plata",
+      initials: "MD"
+    },
+    {
+      text: "Pedí polaroids para el cumple de 15 de mi hija. Llegaron perfectas y fueron el hit de la fiesta. Todas las amigas se llevaron una de recuerdo!",
+      author: "Carolina S.",
+      location: "San Isidro",
+      initials: "CS"
+    },
+    {
+      text: "Como fotógrafo profesional, necesitaba un proveedor confiable para mis clientes. Printeart superó todas mis expectativas. Calidad premium.",
+      author: "Diego L.",
+      location: "Palermo",
+      initials: "DL"
+    },
+    {
+      text: "El fotolibro de mi boda quedó increíble. Cada página es una obra de arte. Mi esposa lloró cuando lo vio. Gracias por hacer esto posible!",
+      author: "Federico M.",
+      location: "Belgrano",
+      initials: "FM"
+    },
+    {
+      text: "Excelente atención al cliente. Tuve un problema con mi pedido y lo resolvieron en minutos. Eso habla muy bien de la empresa.",
+      author: "Valentina P.",
+      location: "Recoleta",
+      initials: "VP"
+    },
+    {
+      text: "Los cuadros para mi living quedaron espectaculares. La calidad de impresión es de galería de arte. Todos preguntan dónde los compré.",
+      author: "Andrés K.",
+      location: "Nordelta",
+      initials: "AK"
+    },
+    {
+      text: "Pedí un álbum para los 50 años de casados de mis padres. Fue el regalo más emotivo que pudimos darles. Calidad impecable.",
+      author: "Romina T.",
+      location: "Vicente López",
+      initials: "RT"
+    },
+    {
+      text: "Ya hice 5 pedidos y todos llegaron perfectos. La consistencia en la calidad es lo que más valoro. Son mi opción número uno.",
+      author: "Gonzalo B.",
+      location: "Pilar",
+      initials: "GB"
+    },
+    {
+      text: "Las fotos de mi embarazo en formato polaroid quedaron hermosas. Un recuerdo único que voy a guardar para siempre. Súper recomendado!",
+      author: "Agustina V.",
+      location: "Tigre",
+      initials: "AV"
+    },
+    {
+      text: "Usamos Printeart para los regalos de fin de año de nuestra empresa. Todos los empleados quedaron encantados. Volveremos a pedirles.",
+      author: "Patricia H.",
+      location: "Puerto Madero",
+      initials: "PH"
+    },
+    {
+      text: "El packaging es tan lindo como el producto. Llegó todo perfectamente empaquetado. Se nota el cuidado en cada detalle.",
+      author: "Nicolás R.",
+      location: "Olivos",
+      initials: "NR"
+    },
+    {
+      text: "Hice un fotolibro de los primeros años de mi hijo y quedé fascinada. La calidad del papel, los colores, todo impecable. 10 puntos!",
+      author: "Florencia A.",
+      location: "Caballito",
+      initials: "FA"
+    },
+    {
+      text: "Regalé polaroids personalizadas a mis amigas para navidad. Fue el regalo más original y todas quedaron encantadas. Excelente servicio.",
+      author: "Camila E.",
+      location: "Núñez",
+      initials: "CE"
+    },
+    {
+      text: "La interfaz para diseñar el álbum es súper intuitiva. En menos de una hora tenía todo listo. Y el resultado final, impresionante.",
+      author: "Sebastián O.",
+      location: "Almagro",
+      initials: "SO"
+    },
+    {
+      text: "Pedí fotos en todos los tamaños y formatos para probar. Todas llegaron perfectas. Ahora sé que puedo confiar en ellos para todo.",
+      author: "Laura C.",
+      location: "Villa Urquiza",
+      initials: "LC"
+    },
+    {
+      text: "El cuadro canvas que pedí para mi oficina es espectacular. La calidad de impresión y los colores son exactamente como se ven en pantalla.",
+      author: "Maximiliano J.",
+      location: "Microcentro",
+      initials: "MJ"
+    },
+    {
+      text: "Mi abuela cumplió 90 años y le armamos un álbum con fotos de toda su vida. Fue el regalo más especial. Gracias Printeart por hacerlo posible.",
+      author: "Julieta N.",
+      location: "San Telmo",
+      initials: "JN"
+    },
+    {
+      text: "Como diseñadora gráfica, soy muy exigente con la calidad de impresión. Printeart cumple con creces. Los recomiendo a todos mis colegas.",
+      author: "Marina W.",
+      location: "Palermo Soho",
+      initials: "MW"
     }
   ];
 
