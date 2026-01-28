@@ -1759,7 +1759,7 @@ body {
 .btn-corp-primary:hover {
   background: var(--white);
   transform: translateY(-2px);
-  color: #000;
+  color: #000 !important;
 }
 
 .btn-corp-secondary {
