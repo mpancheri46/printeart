@@ -215,15 +215,6 @@ function App() {
             <h1>Tus recuerdos, impresos <br /> con <span>calidad editorial.</span></h1>
             <p>Fotolibros, fotos y regalos personalizados. Envíos a todo el país.</p>
 
-            <div className="buttons">
-              <button className="btn primary" data-testid="btn-fotolibros">
-                <i className="fas fa-book-open"></i> Ver Fotolibros
-              </button>
-              <button className="btn secondary" data-testid="btn-polaroids">
-                <i className="fas fa-image"></i> Imprimir Fotos / Polaroids
-              </button>
-            </div>
-
             <div className="badges">
               <span className="badge"><i className="fas fa-map-marker-alt"></i> Retiro en Martinez</span>
               <span className="badge"><i className="fab fa-whatsapp"></i> Soporte por WhatsApp</span>
@@ -467,7 +458,7 @@ function App() {
               <ul className="contact-list">
                 <li><i className="fas fa-map-marker-alt"></i> Martinez, Buenos Aires</li>
                 <li><i className="fab fa-whatsapp"></i> +54 11 1234-5678</li>
-                <li><i className="fas fa-envelope"></i> hola@pixelmemories.com</li>
+                <li><i className="fas fa-envelope"></i> hola@printeart.com</li>
                 <li><i className="fas fa-clock"></i> Lun-Vie 9:00 - 18:00</li>
               </ul>
             </div>
