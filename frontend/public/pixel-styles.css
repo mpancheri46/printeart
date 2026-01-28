@@ -1362,9 +1362,14 @@ body {
 }
 
 .corp-info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.corp-info-single {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .corp-info-card {
@@ -1375,6 +1380,11 @@ body {
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.05);
   transition: all var(--transition);
+}
+
+.corp-info-card.full-width {
+  max-width: 600px;
+  width: 100%;
 }
 
 .corp-info-card:hover {
