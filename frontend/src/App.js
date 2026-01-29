@@ -81,9 +81,8 @@ const Footer = () => (
           <div className="footer-logo">Printe<span>art</span></div>
           <p className="footer-desc">Transformamos tus mejores momentos en recuerdos que duran para siempre.</p>
           <div className="footer-social">
-            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/printeartdesign/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5491125381234" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
           </div>
         </div>
         
@@ -336,10 +335,7 @@ const HomePage = () => {
             <h2>Transformá tus fotos en <span className="cta-highlight">arte impreso</span></h2>
             <p>Cada imagen cuenta una historia. Dejanos ayudarte a preservarla con la mejor calidad de impresión.</p>
             <div className="cta-buttons">
-              <button className="btn cta-primary" data-testid="btn-empezar-ahora">
-                <i className="fas fa-magic"></i> Crear mi proyecto
-              </button>
-              <a href="https://printspot.io/pixelmemories/" className="btn cta-secondary" data-testid="btn-ver-catalogo">
+              <a href="https://printspot.io/pixelmemories/" className="btn cta-primary" data-testid="btn-ver-catalogo">
                 <i className="fas fa-images"></i> Ver catálogo
               </a>
             </div>
