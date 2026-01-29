@@ -61,9 +61,6 @@ const Header = ({ scrollToSection }) => {
         </nav>
 
         <div className="icons">
-          <a href="https://wa.me/5491125381234" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="WhatsApp">
-            <i className="fab fa-whatsapp"></i>
-          </a>
           <a href="https://printspot.io/pixelmemories/mi-cuenta/" className="icon-btn" aria-label="Mi cuenta">
             <i className="fas fa-user"></i>
           </a>
