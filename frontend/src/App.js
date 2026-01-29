@@ -339,9 +339,9 @@ const HomePage = () => {
               <button className="btn cta-primary" data-testid="btn-empezar-ahora">
                 <i className="fas fa-magic"></i> Crear mi proyecto
               </button>
-              <button className="btn cta-secondary" data-testid="btn-ver-catalogo">
+              <a href="https://printspot.io/pixelmemories/" className="btn cta-secondary" data-testid="btn-ver-catalogo">
                 <i className="fas fa-images"></i> Ver catálogo
-              </button>
+              </a>
             </div>
             <div className="cta-trust">
               <div className="trust-item">
