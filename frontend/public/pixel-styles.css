@@ -1981,45 +1981,16 @@ a.badge:hover {
   color: var(--primary-dark);
 }
 
-/* PROD BESTSELLERS */
-.prod-bestsellers {
+/* PROD PRODUCTS (replaces bestsellers) */
+.prod-all {
   padding: 80px 0;
   background: var(--bg-cream);
 }
 
-.prod-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-
-.prod-tab {
-  padding: 12px 28px;
-  background: var(--white);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-medium);
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.prod-tab:hover {
-  border-color: var(--primary);
-}
-
-.prod-tab.active {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #000;
-}
-
 .prod-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .prod-item {
@@ -2037,7 +2008,7 @@ a.badge:hover {
 }
 
 .prod-item-img {
-  height: 140px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -2053,8 +2024,8 @@ a.badge:hover {
 }
 
 .prod-item h4 {
-  padding: 14px 12px;
-  font-size: 13px;
+  padding: 16px 14px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-dark);
 }
