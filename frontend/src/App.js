@@ -506,6 +506,208 @@ const CorporativoPage = () => {
 };
 
 // ==========================================
+// PRODUCTOS PAGE (Para tus recuerdos)
+// ==========================================
+const ProductosPage = () => {
+  const [activeTab, setActiveTab] = useState('fotolibros');
+
+  const categories = [
+    {
+      id: 'fotolibros',
+      title: 'Fotolibros',
+      desc: 'Creá álbumes únicos con tus mejores fotos. Calidad editorial premium.',
+      img: '/assets/productos/caja_fotolibro.png',
+      link: 'https://printspot.io/pixelmemories/?collection=2&origin=407&catalogue=1'
+    },
+    {
+      id: 'polaroids',
+      title: 'Polaroids',
+      desc: 'Fotos estilo retro perfectas para regalar o decorar.',
+      img: '/assets/productos/caja_polaroid.png',
+      link: 'https://printspot.io/pixelmemories/?collection=5&origin=407&catalogue=1'
+    },
+    {
+      id: 'fotos',
+      title: 'Fotos Clásicas',
+      desc: 'Impresiones en papel fotográfico de alta calidad.',
+      img: 'https://images.pexels.com/photos/2780553/pexels-photo-2780553.jpeg?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://printspot.io/pixelmemories/'
+    }
+  ];
+
+  const productsByCategory = {
+    fotolibros: [
+      { title: 'Fotolibro Clásico', img: 'https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Fotolibro Premium', img: 'https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Fotolibro Viajes', img: 'https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Fotolibro Bebé', img: 'https://images.pexels.com/photos/3875089/pexels-photo-3875089.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Fotolibro Boda', img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Fotolibro Familia', img: 'https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    ],
+    polaroids: [
+      { title: 'Pack x12 Polaroids', img: 'https://images.pexels.com/photos/2983401/pexels-photo-2983401.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Pack x24 Polaroids', img: 'https://images.pexels.com/photos/11986518/pexels-photo-11986518.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Polaroids con Marco', img: 'https://images.pexels.com/photos/1252983/pexels-photo-1252983.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Polaroids Magnéticas', img: 'https://images.pexels.com/photos/1670723/pexels-photo-1670723.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Polaroids Vintage', img: 'https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Polaroids Mini', img: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    ],
+    regalos: [
+      { title: 'Fotocuadro Canvas', img: 'https://images.pexels.com/photos/2232117/pexels-photo-2232117.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Calendario Personalizado', img: 'https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Taza con Foto', img: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Imán Personalizado', img: 'https://images.pexels.com/photos/5632381/pexels-photo-5632381.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Puzzle con Foto', img: 'https://images.pexels.com/photos/6568484/pexels-photo-6568484.jpeg?auto=compress&cs=tinysrgb&w=400' },
+      { title: 'Poster Personalizado', img: 'https://images.pexels.com/photos/6177645/pexels-photo-6177645.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    ]
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="productos-page">
+      {/* HERO */}
+      <section className="prod-hero">
+        <div className="container">
+          <div className="prod-hero-content">
+            <h1>¡Imprimí tus momentos <span>más especiales!</span></h1>
+            <p>Fotolibros, polaroids y regalos personalizados con la mejor calidad de impresión.</p>
+            <div className="prod-badges">
+              <a href="https://share.google/01KAT3DWd2IyFArZm" target="_blank" rel="noopener noreferrer" className="prod-badge">
+                <i className="fas fa-map-marker-alt"></i> Retiro en Martinez
+              </a>
+              <a href="https://wa.me/5491125381234" target="_blank" rel="noopener noreferrer" className="prod-badge">
+                <i className="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <span className="prod-badge">
+                <i className="fas fa-lock"></i> Pagos seguros
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CATEGORÍAS */}
+      <section className="prod-categories">
+        <div className="container">
+          <div className="prod-categories-grid">
+            {categories.map((cat) => (
+              <a href={cat.link} key={cat.id} className="prod-category-card">
+                <div className="prod-category-img">
+                  <img src={cat.img} alt={cat.title} />
+                </div>
+                <div className="prod-category-content">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                  <span className="prod-category-btn">
+                    Ver más <i className="fas fa-chevron-right"></i>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LOS MÁS VENDIDOS */}
+      <section className="prod-bestsellers">
+        <div className="container">
+          <h2 className="section-title">Los Más Vendidos</h2>
+          
+          <div className="prod-tabs">
+            <button 
+              className={`prod-tab ${activeTab === 'fotolibros' ? 'active' : ''}`}
+              onClick={() => setActiveTab('fotolibros')}
+            >
+              Fotolibros
+            </button>
+            <button 
+              className={`prod-tab ${activeTab === 'polaroids' ? 'active' : ''}`}
+              onClick={() => setActiveTab('polaroids')}
+            >
+              Polaroids
+            </button>
+            <button 
+              className={`prod-tab ${activeTab === 'regalos' ? 'active' : ''}`}
+              onClick={() => setActiveTab('regalos')}
+            >
+              Regalos
+            </button>
+          </div>
+
+          <div className="prod-grid">
+            {productsByCategory[activeTab].map((product, index) => (
+              <div key={index} className="prod-item">
+                <div className="prod-item-img">
+                  <img src={product.img} alt={product.title} loading="lazy" />
+                </div>
+                <h4>{product.title}</h4>
+              </div>
+            ))}
+          </div>
+
+          <div className="prod-view-all">
+            <a href="https://printspot.io/pixelmemories/" className="btn-view-all">
+              Ver todo el catálogo <i className="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* PERSONALIZÁ */}
+      <section className="prod-personalize">
+        <div className="container">
+          <div className="prod-personalize-grid">
+            <div className="prod-personalize-content">
+              <h2>Personalizá tus <span>Recuerdos</span></h2>
+              <p>Cada foto cuenta una historia. Dejanos ayudarte a preservarla con productos únicos y de alta calidad.</p>
+              <ul className="prod-features">
+                <li><i className="fas fa-check"></i> Calidad de impresión premium</li>
+                <li><i className="fas fa-check"></i> Materiales de primera calidad</li>
+                <li><i className="fas fa-check"></i> Diseños personalizables</li>
+                <li><i className="fas fa-check"></i> Envíos a todo el país</li>
+              </ul>
+              <a href="https://printspot.io/pixelmemories/" className="btn-personalize">
+                Empezar a crear <i className="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div className="prod-personalize-img">
+              <img src="https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Personalización" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CÓMO FUNCIONA */}
+      <section className="prod-how">
+        <div className="container">
+          <h2 className="section-title">Cómo Funciona</h2>
+          <div className="prod-how-grid">
+            <div className="prod-step">
+              <div className="prod-step-num">1</div>
+              <h3>Elegí tu producto</h3>
+              <p>Explorá nuestro catálogo y elegí lo que más te guste</p>
+            </div>
+            <div className="prod-step">
+              <div className="prod-step-num">2</div>
+              <h3>Subí tus fotos</h3>
+              <p>Cargá tus imágenes y personalizá tu diseño</p>
+            </div>
+            <div className="prod-step">
+              <div className="prod-step-num">3</div>
+              <h3>Recibí en casa</h3>
+              <p>Te lo enviamos o retiralo en Martinez</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+// ==========================================
 // MAIN APP
 // ==========================================
 function App() {
