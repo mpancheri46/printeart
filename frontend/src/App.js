@@ -717,6 +717,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/productos" element={<ProductosPage />} />
           <Route path="/corporativo" element={<CorporativoPage />} />
         </Routes>
         <Footer />
