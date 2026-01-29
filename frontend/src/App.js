@@ -509,7 +509,16 @@ const CorporativoPage = () => {
 // PRODUCTOS PAGE (Para tus recuerdos)
 // ==========================================
 const ProductosPage = () => {
-  const [activeTab, setActiveTab] = useState('fotolibros');
+  const products = [
+    { title: 'Tazas Personalizadas', img: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    { title: 'Calendarios Personalizados', img: 'https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    { title: 'Poster Personalizados', img: 'https://images.pexels.com/photos/6177645/pexels-photo-6177645.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    { title: 'Fotolibros', img: '/assets/productos/caja_fotolibro.png' },
+    { title: 'Fotocuadros', img: 'https://images.pexels.com/photos/2232117/pexels-photo-2232117.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    { title: 'Remeras Personalizadas', img: 'https://images.pexels.com/photos/5698851/pexels-photo-5698851.jpeg?auto=compress&cs=tinysrgb&w=400' },
+    { title: 'Polaroids', img: '/assets/productos/caja_polaroid.png' },
+    { title: 'Individuales y Posavasos', img: 'https://images.pexels.com/photos/4992828/pexels-photo-4992828.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  ];
 
   const categories = [
     {
@@ -534,33 +543,6 @@ const ProductosPage = () => {
       link: 'https://printspot.io/pixelmemories/'
     }
   ];
-
-  const productsByCategory = {
-    fotolibros: [
-      { title: 'Fotolibro Clásico', img: 'https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Fotolibro Premium', img: 'https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Fotolibro Viajes', img: 'https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Fotolibro Bebé', img: 'https://images.pexels.com/photos/3875089/pexels-photo-3875089.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Fotolibro Boda', img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Fotolibro Familia', img: 'https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    ],
-    polaroids: [
-      { title: 'Pack x12 Polaroids', img: 'https://images.pexels.com/photos/2983401/pexels-photo-2983401.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Pack x24 Polaroids', img: 'https://images.pexels.com/photos/11986518/pexels-photo-11986518.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Polaroids con Marco', img: 'https://images.pexels.com/photos/1252983/pexels-photo-1252983.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Polaroids Magnéticas', img: 'https://images.pexels.com/photos/1670723/pexels-photo-1670723.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Polaroids Vintage', img: 'https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Polaroids Mini', img: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    ],
-    regalos: [
-      { title: 'Fotocuadro Canvas', img: 'https://images.pexels.com/photos/2232117/pexels-photo-2232117.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Calendario Personalizado', img: 'https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Taza con Foto', img: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Imán Personalizado', img: 'https://images.pexels.com/photos/5632381/pexels-photo-5632381.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Puzzle con Foto', img: 'https://images.pexels.com/photos/6568484/pexels-photo-6568484.jpeg?auto=compress&cs=tinysrgb&w=400' },
-      { title: 'Poster Personalizado', img: 'https://images.pexels.com/photos/6177645/pexels-photo-6177645.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    ]
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -611,34 +593,12 @@ const ProductosPage = () => {
         </div>
       </section>
 
-      {/* LOS MÁS VENDIDOS */}
-      <section className="prod-bestsellers">
+      {/* PRODUCTOS */}
+      <section className="prod-all">
         <div className="container">
-          <h2 className="section-title">Los Más Vendidos</h2>
-          
-          <div className="prod-tabs">
-            <button 
-              className={`prod-tab ${activeTab === 'fotolibros' ? 'active' : ''}`}
-              onClick={() => setActiveTab('fotolibros')}
-            >
-              Fotolibros
-            </button>
-            <button 
-              className={`prod-tab ${activeTab === 'polaroids' ? 'active' : ''}`}
-              onClick={() => setActiveTab('polaroids')}
-            >
-              Polaroids
-            </button>
-            <button 
-              className={`prod-tab ${activeTab === 'regalos' ? 'active' : ''}`}
-              onClick={() => setActiveTab('regalos')}
-            >
-              Regalos
-            </button>
-          </div>
-
+          <h2 className="section-title">Nuestros Productos</h2>
           <div className="prod-grid">
-            {productsByCategory[activeTab].map((product, index) => (
+            {products.map((product, index) => (
               <div key={index} className="prod-item">
                 <div className="prod-item-img">
                   <img src={product.img} alt={product.title} loading="lazy" />
@@ -647,7 +607,6 @@ const ProductosPage = () => {
               </div>
             ))}
           </div>
-
           <div className="prod-view-all">
             <a href="https://printspot.io/pixelmemories/" className="btn-view-all">
               Ver todo el catálogo <i className="fas fa-arrow-right"></i>
@@ -675,30 +634,6 @@ const ProductosPage = () => {
             </div>
             <div className="prod-personalize-img">
               <img src="https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Personalización" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CÓMO FUNCIONA */}
-      <section className="prod-how">
-        <div className="container">
-          <h2 className="section-title">Cómo Funciona</h2>
-          <div className="prod-how-grid">
-            <div className="prod-step">
-              <div className="prod-step-num">1</div>
-              <h3>Elegí tu producto</h3>
-              <p>Explorá nuestro catálogo y elegí lo que más te guste</p>
-            </div>
-            <div className="prod-step">
-              <div className="prod-step-num">2</div>
-              <h3>Subí tus fotos</h3>
-              <p>Cargá tus imágenes y personalizá tu diseño</p>
-            </div>
-            <div className="prod-step">
-              <div className="prod-step-num">3</div>
-              <h3>Recibí en casa</h3>
-              <p>Te lo enviamos o retiralo en Martinez</p>
             </div>
           </div>
         </div>
