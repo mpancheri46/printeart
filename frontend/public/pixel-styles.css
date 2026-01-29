@@ -152,6 +152,10 @@ body {
   cursor: pointer;
   border-radius: 50%;
   transition: all var(--transition);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-btn:hover {
