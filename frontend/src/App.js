@@ -178,7 +178,7 @@ const HomePage = () => {
             <h1>Tus recuerdos, impresos <br /> con <span>calidad editorial.</span></h1>
             <p>Fotolibros, fotos y regalos personalizados. Envíos a todo el país.</p>
             <div className="badges">
-              <span className="badge"><i className="fas fa-map-marker-alt"></i> Retiro en Martinez</span>
+              <a href="https://share.google/01KAT3DWd2IyFArZm" target="_blank" rel="noopener noreferrer" className="badge"><i className="fas fa-map-marker-alt"></i> Retiro en Martinez</a>
               <span className="badge"><i className="fab fa-whatsapp"></i> Soporte por WhatsApp</span>
               <span className="badge"><i className="fas fa-lock"></i> Pagos seguros</span>
             </div>
