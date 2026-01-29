@@ -192,7 +192,7 @@ const HomePage = () => {
             <div className="rec-card__content">
               <h2>Para tus recuerdos</h2>
               <p className="card-desc">Fotolibros, polaroids y más para guardar tus mejores momentos</p>
-              <button className="btn-rec" data-testid="btn-ver-productos">
+              <button className="btn-rec" onClick={() => navigate('/productos')} data-testid="btn-ver-productos">
                 <i className="fas fa-heart"></i> Ver productos
               </button>
             </div>
