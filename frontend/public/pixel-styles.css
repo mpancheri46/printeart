@@ -556,11 +556,13 @@ body {
   cursor: pointer;
   transition: all var(--transition);
   width: 100%;
+  text-decoration: none;
 }
 
 .btn-product:hover {
   background: var(--primary);
   border-color: var(--primary);
+  color: var(--text-dark);
 }
 
 /* =========================
