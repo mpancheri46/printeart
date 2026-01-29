@@ -347,18 +347,18 @@ body {
   font-size: 17px;
 }
 
-.badges {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
 .badge {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 14px;
   color: var(--text-medium);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a.badge:hover {
+  color: var(--text-dark);
 }
 
 .badge i {
