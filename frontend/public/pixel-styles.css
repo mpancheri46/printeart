@@ -365,6 +365,12 @@ a.badge:hover {
   color: var(--primary-dark);
 }
 
+.badges {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 /* =========================
    DUAL CARDS
 ========================= */
